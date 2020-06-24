@@ -5,6 +5,10 @@ class Api::PostsController < ApplicationController
     render json: Post.all
   end
 
+  def get_current_user
+    render json: current_user
+  end
+
   def show
     # render :json @post
   end
