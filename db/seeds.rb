@@ -14,7 +14,7 @@
 
   5.times do 
     user.posts.create(
-      name: Faker::Commerce.product_name, 
+      name: Faker::Artist.name, 
       text: Faker::Lorem.sentence, 
       avatar: Faker::Avatar.image(slug: "my-own-slug")
     )

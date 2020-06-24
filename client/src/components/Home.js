@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
 import axios from "axios"
-import {Card, Button, Icon, Image, CardGroup} from "semantic-ui-react"
+import {Card, Button, Icon, Image, CardGroup, CardHeader} from "semantic-ui-react"
 import {Link} from "react-router-dom"
 import {Header} from "semantic-ui-react"
 
@@ -19,14 +19,17 @@ const Home = () => {
     })
   },[])
 
+
   const renderPosts= () =>{
     return posts.map (post => (
       <>
-      <CardGroup>
-        <h1>{post.name}</h1>
-        <p>{post.text}</p>
+      <Card>
         <Image src={post.avatar} />
-      </CardGroup>
+        <Card.Content>
+        <Card.Header>{post.name}</Card.Header>
+        <Card.Description>{post.text}</Card.Description>
+        </Card.Content>
+      </Card>
       </>
       
     ))
