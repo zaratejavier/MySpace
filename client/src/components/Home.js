@@ -27,7 +27,7 @@ const Home = () => {
         <Image src={post.avatar} />
         <Card.Content>
         <Card.Header>{post.name}</Card.Header>
-        <Card.Description>{post.text}</Card.Description>
+        <Card.Description>{post.text.substring(1, 30)}...</Card.Description>
         </Card.Content>
       </Card>
       </>
