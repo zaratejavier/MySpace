@@ -10,7 +10,9 @@ class Api::PostsController < ApplicationController
   end
 
   def show
-    # render :json @post
+    post = Post.find(params[:id])
+    render json: post
+
   end
 
   def update

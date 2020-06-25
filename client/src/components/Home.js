@@ -42,7 +42,9 @@ const Home = () => {
         <Card.Content>
         <Card.Header>{post.name}</Card.Header>
         <Card.Description>{post.text.substring(1, 30)}...</Card.Description>
+            <Link to={`/posts/${post.id}`} key={post.id} {...post}>
         <Button>View</Button>
+        </Link>
         </Card.Content>
       </Card>
       </>
